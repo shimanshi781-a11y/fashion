@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRÉ | Wear Your Story</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="announcement">
+    Complimentary shipping on orders above ₹2,499
+  </div>
+
+  <header class="navbar">
+    <a href="#" class="logo">NOIRÉ<span>.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">Our Story</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="searchToggle" aria-label="Search">⌕</button>
+      <button id="cartToggle" aria-label="Open shopping cart">
+        Bag (<span id="cartCount">0</span>)
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-bar" id="searchBar">
+    <input type="search" id="searchInput" placeholder="Search clothing...">
+    <button id="searchButton">Search</button>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">THE NEW SEASON / 2026</p>
+        <h1>Style is<br>your story<span>.</span></h1>
+        <p class="hero-description">
+          Thoughtfully chosen essentials. Timeless silhouettes.
+          Clothes that feel like you.
+        </p>
+        <a href="#collection" class="primary-btn">Explore Collection ↗</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Fashion editorial campaign"></div>
+      <div class="hero-number">01 / NEW BEGINNINGS</div>
+    </section>
+
+    <section class="intro">
+      <p>LESS, BUT BETTER.</p>
+      <h2>Everyday pieces.<br><em>Extraordinary feeling.</em></h2>
+      <span>Designed for your everyday, made to stay in your wardrobe.</span>
+    </section>
+
+    <section class="collection section" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>The Collection</h2>
+        </div>
+        <span class="product-total" id="productTotal">06 PIECES</span>
+      </div>
+
+      <div class="collection-tools">
+        <div class="filters">
+          <button class="filter-btn active" data-category="all">All pieces</button>
+          <button class="filter-btn" data-category="tops">Tops</button>
+          <button class="filter-btn" data-category="bottoms">Bottoms</button>
+          <button class="filter-btn" data-category="outerwear">Outerwear</button>
+        </div>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="story section" id="about">
+      <div class="story-image"></div>
+      <div class="story-content">
+        <p class="eyebrow">THE NOIRÉ PHILOSOPHY</p>
+        <h2>Fashion fades.<br><em>Your style stays.</em></h2>
+        <p>
+          We believe getting dressed should feel effortless.
+          NOIRÉ brings together versatile pieces, thoughtful
+          details and timeless design for a wardrobe that feels
+          completely your own.
+        </p>
+        <a href="#collection" class="text-link">Find your everyday favourites ↗</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">A LITTLE NOTE FROM US</p>
+      <h2>Good things, in your inbox.</h2>
+      <p>Get updates on new arrivals, styling ideas and more.</p>
+      <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Your email address" required>
+        <button type="submit">Sign me up ↗</button>
+      </form>
+      <p class="newsletter-message" id="newsletterMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">NOIRÉ<span>.</span></a>
+    <p>Wear your story. © <span id="year"></span> NOIRÉ</p>
+    <div class="footer-links">
+      <a href="#collection">Shop</a>
+      <a href="#about">About</a>
+      <a href="mailto:hello@noire.example">Contact</a>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Bag (<span id="drawerCount">0</span>)</h2>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₹0</strong>
+      </div>
+      <p>Shipping and taxes are calculated at checkout.</p>
+      <button class="checkout-btn" id="checkoutButton">Continue to Checkout ↗</button>
+      <button class="continue-btn" id="continueShopping">Continue shopping</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
